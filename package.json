@@ -1,0 +1,26 @@
+{
+  "name": "@astlaure/valkyrie-workspace",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:admin": "npm run watch -w @astlaure/valkyrie-admin",
+    "watch:common": "npm run watch -w @astlaure/valkyrie-common",
+    "watch:core": "npm run watch -w @astlaure/valkyrie-core",
+    "watch:web": "npm run watch -w @astlaure/valkyrie-web",
+    "watch:server": "npm run start:dev -w @astlaure/valkyrie-web",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.5.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
